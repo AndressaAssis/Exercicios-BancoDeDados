@@ -24,10 +24,20 @@ Criação de uma tabela chamada **clientes** com as seguintes colunas:
 - `email`: Texto, único.
 - `data_cadastro`: Data.
 
-```sql
-CREATE TABLE clientes (
+
+`CREATE TABLE clientes (
     id SERIAL PRIMARY KEY,
     nome TEXT NOT NULL,
     email TEXT UNIQUE,
     data_cadastro DATE
-);
+);`
+
+## Modificação de Tabelas
+Adição de Colunas
+Adiciona colunas à tabela clientes:
+telefone: Texto.
+data_nascimento: Data.
+
+ALTER TABLE clientes
+ADD COLUMN telefone TEXT,
+ADD COLUMN data_nascimento DATE;
